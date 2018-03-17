@@ -1,7 +1,7 @@
 ﻿# Polievač záhrady
 ## Hardware
 
-![alt text](hardware_doc.png "Title")
+![alt text](hardware_doc.png "Náčrt hardwarového zapojenia")
 
 ### Úvod
 
@@ -17,9 +17,9 @@ Elektromagnetický ventil nemá označené piny a je jedno na ktorý príde 12V 
 
 Zostáva už len nahrať kód, pripojiť 12V zdroj podľa schémy, NodeMCU napájať cez USB z nabíjačky od mobilu _alebo_ na 12V zdroj pripojiť regulátor na 5V, ktorého výstup príde na pin VIN a zem na G. Potom stačí pichnúť vidlicu merača do zeme a malým šrobovákom nastaviť na doske merača potenciometer tak, aby sme určili hranicu medzi suchou a vlhkou pôdou. Taktiež treba overiť, či má NodeMCU v záhrade dostatočne silný signál WiFi. Na záver si treba overiť inštalatérske zručnosti a ventil zapojiť z jednej strany na vodovodnú sieť a z druhej na hadicu ktorou zavlažujeme. Ventil má 1/2&quot; závity, a smer toku vody určuje šípka na spodnej strane.
 
-[https://www.ebay.com/itm/Soil-Hygrometer-Humidity-Detection-Module-Moisture-Water-Sensor-for-Arduino-MO-/152313534468?hash=item2376981804](https://www.ebay.com/itm/Soil-Hygrometer-Humidity-Detection-Module-Moisture-Water-Sensor-for-Arduino-MO-/152313534468?hash=item2376981804)
+<https://www.ebay.com/itm/Soil-Hygrometer-Humidity-Detection-Module-Moisture-Water-Sensor-for-Arduino-MO-/152313534468?hash=item2376981804>
 
-[https://www.ebay.com/itm/N-C-DC-12V-0-0-8MPa-1-2-Electric-Solenoid-Valve-for-Water-Air-Hot-/172599452473?hash=item282fbaa339](https://www.ebay.com/itm/N-C-DC-12V-0-0-8MPa-1-2-Electric-Solenoid-Valve-for-Water-Air-Hot-/172599452473?hash=item282fbaa339)
+<https://www.ebay.com/itm/N-C-DC-12V-0-0-8MPa-1-2-Electric-Solenoid-Valve-for-Water-Air-Hot-/172599452473?hash=item282fbaa339>
 
 ## Software
 
@@ -39,4 +39,4 @@ Vráti boolean, či je počasie vhodné na polievanie. Cez Yahoo Weather API dos
 *water()*
 Na 5 minút otvorí uzáver vody a poleje záhradu, ak nebolo aspoň 4 dni poliata. Zároveň vynuluje počítadlo dní od posledného poliatia.
 
- ![alt text](software_doc.png "Title")
+ ![alt text](software_doc.png "Schéma fungovania programu")
