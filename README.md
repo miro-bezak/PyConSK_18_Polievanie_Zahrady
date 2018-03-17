@@ -30,7 +30,7 @@ Zdrojový kód si nahráme na dosku cez ľubovolné prostredie, treba sa uistiť
 Jedinou úlohou funkcie je dostať počítač do časov vhodných na polievanie. Ak aktuálny čas nie je vhodný, tak si   dopočíta počet sekúnd do začiatku vhodného intervalu a dovtedy bude „spať&quot;.
 
 *sensor()*
-Zistí vlhkosť pody, ak je mokrá tak čaká a potom opakuje meranie. Ak je mokrá, tak skontroluje pripojenie na WiFi, ak je, tak zavolá weather\_suitable\_for\_watering(), ak je výstup True, tak spustí water(), ak False, tak počká a pri daľšom meraní možem byť predpoveď zmenená. Ak nemáme pripojenie na WiFi, počasie zanedbáme. Kebyže sa senzor pokazí a tvrdí, že je pôda stále mokrá, tak vďaka kontrole cez days\_since\_watering sa záhrada nepoleje raz za viac ako 4 dni.
+Zistí vlhkosť pody, ak je mokrá tak čaká a potom opakuje meranie. Ak je mokrá, tak skontroluje pripojenie na WiFi, ak je, tak zavolá *weather\_suitable\_for\_watering()*, ak je výstup True, tak spustí *water()*, ak False, tak počká a pri daľšom meraní možem byť predpoveď zmenená. Ak nemáme pripojenie na WiFi, počasie zanedbáme. Kebyže sa senzor pokazí a tvrdí, že je pôda stále mokrá, tak vďaka kontrole cez *days\_since\_watering* sa záhrada nepoleje raz za viac ako 4 dni.
 
 *weather\_suitable\_for\_watering()*
 Vráti boolean, či je počasie vhodné na polievanie. Cez Yahoo Weather API dostaneme kód počasia, a cez tabuľky na webstránke služby si vyberieme podmienky pri ktorých chceme polievať, u nás je to žiadny dážď.
