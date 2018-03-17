@@ -1,12 +1,13 @@
-﻿**Polievač záhrady**
+﻿# Polievač záhrady
+## Hardware
 
 ![alt text](hardware_doc.png "Title")
 
-**Úvod**
+### Úvod
 
 Tento projekt je modifikáciou zavlažovaču kvetináča. Merač vlhkosti sníma vlhkosť pôdy, ale namiesto vodnej pumpy je podľa potreby spínaný elektromagnetický ventil napojený na vodovod. Na rozdiel od kvetináču v byte, na záhradu aj prší a preto pracujeme s predpoveďou počasia. Ak je pôda suchá, ale v blízkej dobe bude pršať, program počká a ušetrí vodu.
 
-**Postup**
+### Postup
 
 Vidlicu meraču vlhkosti pripojíme k jeho doske dvoma káblikmi. Keďže meria odpor (pôdy) nezáleží na tom, ktorý pin pripojíme kam. Na opačnej strane dosky sú štyri piny. VCC zapojíme na pin 3.3V na NodeMCU, GND na GND. Pin DO (digital out) zapojíme na pin D1 (Pin5 v micropythone). Pin AO nepoužijeme, keďže nepotrebujeme pracovať s presnou hodnotou vlhkosti pôdy, ale stačí nám vedieť len či je zem vlhká alebo suchá (digitálna 1 alebo 0).
 
@@ -20,11 +21,11 @@ Zostáva už len nahrať kód, pripojiť 12V zdroj podľa schémy, NodeMCU napá
 
 [https://www.ebay.com/itm/N-C-DC-12V-0-0-8MPa-1-2-Electric-Solenoid-Valve-for-Water-Air-Hot-/172599452473?hash=item282fbaa339](https://www.ebay.com/itm/N-C-DC-12V-0-0-8MPa-1-2-Electric-Solenoid-Valve-for-Water-Air-Hot-/172599452473?hash=item282fbaa339)
 
-**SOFTWARE**
+## Software
 
 Zdrojový kód si nahráme na dosku cez ľubovolné prostredie, treba sa uistiť, že sa nej nachádzajú všetky knižnice, ktoré sa v kóde používajú. Mali by byť v najnovšej Micropython štandarnej knižnici, ak nie tak ich treba nahrať ako samostatné .py súbory, všetky sa nachádzajú na GitHube Micropythonu. Pri štarte počítača sa automaticky pustí funkcia chceker a bude bežať pokiaľ bude počítač zapnutý.
 
-**POPIS FUNKCIÍ**
+### Funkcie
 
 *checker()*
 Jedinou úlohou funkcie je dostať počítač do časov vhodných na polievanie. Ak aktuálny čas nie je vhodný, tak si   dopočíta počet sekúnd do začiatku vhodného intervalu a dovtedy bude „spať&quot;.
