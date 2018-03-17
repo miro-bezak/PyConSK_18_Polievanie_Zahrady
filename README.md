@@ -1,7 +1,7 @@
 ﻿# Polievač záhrady
 ## Hardware
 
-![alt text](hardware_doc.png "Náčrt hardwarového zapojenia")
+![](hardware_doc.png "Náčrt hardwarového zapojenia")
 
 ### Úvod
 
@@ -39,4 +39,4 @@ Vráti boolean, či je počasie vhodné na polievanie. Cez Yahoo Weather API dos
 *water()*
 Na 5 minút otvorí uzáver vody a poleje záhradu, ak nebolo aspoň 4 dni poliata. Zároveň vynuluje počítadlo dní od posledného poliatia.
 
- ![alt text](software_doc.png "Schéma fungovania programu")
+ ![](software_doc.png "Schéma fungovania programu")
